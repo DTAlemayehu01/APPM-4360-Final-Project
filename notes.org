@@ -1,0 +1,65 @@
+#+title: Notes
+#+startup: latexpreview
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{physics}
+
+* Project
+** Special Functions in the complex plane
+*** Gamma Function
+**** Relation to the zeta function?
+**** Laplace Transform?
+*** Reimann-Zeta
+*** Elliptic Curves/cryptography?
+** Not as Cool
+*** Airy functions
+** Properties to describe regarding functions
+*** Analyicity/Singularities
+*** Visualization
+*** Ode Solution?
+**** What does this one mean?
+*** Integral Representation
+*** Applications
+** What else?
+*** Probability Notes
+- Gamma Distribution: given positive parameters \((\alpha, \lambda)\), the PDF of CRV \(X\) is given by
+  - Equation:
+  \begin{flalign*}
+        f(x) =
+        \begin{cases}
+                \frac{\lambda e^{-\lambda x}(\lambda x)^{\alpha - 1}}{\Gamma(\alpha)}, & \text{if \(x \ge 0\)}, \\
+                0, & \text{if \(x < 0\)}
+        \end{cases}
+  \end{flalign*}
+  - Gamma Function: \(\Gamma(\alpha) = \int_0^\infty e^{-y}y^{\alpha - 1}\, dy\)
+  - Note if \(\alpha = 1\) then \(X\) is an Exponential RV with parameter \(\lambda\)
+- Gamma properties
+  - For \(\alpha = n \in \mathbb{Z}^+\), \(X\) is the waiting time until a total of \(n\) evens have occured, the sum of \(n\) exponential random variables
+  - Note \(\alpha > 0\) is a shape parameter, \(\lambda > 0\) is a scale parameter
+  - \(\Gamma(1) = 1, \Gamma(1/2) = \sqrt{\pi}\), using IBP it can be shown \(\Gamma(\alpha) = (\alpha - 1)\Gamma(\alpha - 1)\)
+  - For \(\alpha = n \in \mathbb{Z}\) the CDF is
+    - Equation:
+      \begin{flalign*}
+        F(t) = P(X \le t) =
+                \begin{cases}
+                        1 - \sum_{j= 0}^{n -1}e^{-\lambda t} \frac{(\lambda t)^j}{j!}, & \text{if \(t \ge 0\)} \\
+                        0, & \text{if \(t < 0\)} \\
+                \end{cases}
+      \end{flalign*}
+
+  1. Let \(X_1, X_2, \dots, X_n\) be independent Gamma RVs with parameters \(\alpha_i,\lambda\) for \(i \in \mathbb{Z}^+\)
+     - Then \(\sum_{i=1}^n X_i\) is a Gamma RV with parameters \(\sum_{i=1}^n\alpha_i, \lambda\)
+* TODO s
+** DONE Review Gamma Function Plots
+CLOSED: [2025-04-28 Mon 14:12]
+** DONE Review Zeta Function Plots
+CLOSED: [2025-04-28 Mon 14:12]
+** TODO Review Plot Analysis
+- [ ] Add Re Im Plots to appendix
+** DONE Make Gamma Distribution Plots
+CLOSED: [2025-04-28 Mon 14:35]
+** TODO Make Beta Distribution Plots
+** TODO Review Distribution Writeups
+** TODO Make Prime Number Distribution Plot
+** DONE Make Zeros plot of Reimann Zeta Function?
+CLOSED: [2025-04-28 Mon 14:35]
+- [X] This is the parameterized lines \(z(t) = 1/2 + i*t\)
